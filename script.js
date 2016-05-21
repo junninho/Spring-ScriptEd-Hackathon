@@ -9,7 +9,7 @@ var chosen = {
     clothing: clothing[0],
 };
 
-var display = "images/" + chosen.gender + "-" + chosen.skin + "-" + chosen.clothing;
+var display = "images/" + chosen.gender + "/" + chosen.gender + "-" + chosen.skin + "-" + chosen.clothing;
 
 $(document).ready(function() {
     var toReplace = '';
@@ -51,14 +51,14 @@ $(document).ready(function() {
     //$(".option").click(function() {
         var optionType = $(this).attr('data-option-type');
         chosen[optionType] = $(this).attr('id').split('-')[1];
-        var display = "images/" + chosen.gender + "-" + chosen.skin + "-" + chosen.clothing + ".png";
+        var display = "images/" + chosen.gender + "/" + chosen.gender + "-" + chosen.skin + "-" + chosen.clothing + ".png";
         $(".charimage").css("background-image", "url("+ display +")");
     });
     
     $("#continue").click(function(){
         //var tabs = $("#customBar .btn");
-        var nextIndex = index++;
-        $("customBar .btn:nth-child("+nextIndex+")").trigger("click");
+        index++;
+        $("." + index.toString()).trigger("click");
     });
 
 });
@@ -75,4 +75,9 @@ function createOption(str, optionType) {
 
     return result;
 }
-//$(#)
+//$(#gender).click(function){
+    
+    
+    
+    
+
