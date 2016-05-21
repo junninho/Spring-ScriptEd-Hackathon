@@ -1,0 +1,32 @@
+body {
+    font-family: 'Lobster Two', cursive;
+}
+
+#customizationBar{
+    color: red;
+    background-color: transparent;
+    
+}
+
+#customizationBar button{
+    color:red;
+}
+
+#preview {
+    background-image: url("images/bg.jpg");
+}
+
+/*. customizationBarow li{*/
+    /*position: rtive;*/
+    /*font-weight: bold;*/
+    /*font-size:15px;*/
+/*    display: inline;*/
+/*    font-size:20px;*/
+/*    padding:20px;*/
+/*    border:5px;*/
+/*}*/
+
+.goBattle{
+    font-style: italic;
+    font-weight: bold;
+}
