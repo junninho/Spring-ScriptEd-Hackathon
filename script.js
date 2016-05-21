@@ -58,6 +58,10 @@ $(document).ready(function() {
     $("#continue").click(function(){
         //var tabs = $("#customBar .btn");
         index++;
+        if(index > 2){
+            index = 2;
+            
+        }
         $("." + index.toString()).trigger("click");
     });
 

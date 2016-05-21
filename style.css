@@ -59,14 +59,7 @@ footer{
     padding: 10px;
 }
 
-#option-male{
-    background-image: url('images/male/male.png');
 
-}
-#option-female{
-    background-image: url('images/female/female.png');
-   
-}
 #continue{
     font-size:20px;
     border-color:Red;
