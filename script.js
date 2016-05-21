@@ -1,17 +1,18 @@
-// JavaScript File
+/* global $ */
 
 var gender = ["Male", "Female"]
-var skin = ["<li>Skin 1</li>", "<li>Skin 2</li>", "<li>Skin 3</li>"]
-var clothing = ["<li>Clothing 1</li>", "<li>Clothing 2</li>"]
-var colors = ["<li>Red</li>", "<li>Black</li>", "<li>Blue</li>", "<li>Green</li>", "<li>Pink</li>", "<li>Purple</li>"];
+var skin = ["Skin 1", "Skin 2", "Skin 3"]
+var clothing = ["Clothing 1", "Clothing 2"]
+var colors = ["Red", "Black", "Blue", "Green", "Pink", "Purple"];
 var technique = [];
-var weapon = ["<li>Sword</li>", "<li>Katana</li>", "<li>Staff</li>"];
+var weapon = ["Sword", "Katana", "Staff"];
 
 $(document).ready(function() {
     var toReplace = '';
 
     $("#customBar .btn").click(function() {
         console.log("clicked" + $(this).attr('id'));
+        
         switch ($(this).attr('id')) {
             case "gender":
                 for (var i = 0; i < gender.length; i++) {
@@ -58,32 +59,25 @@ $(document).ready(function() {
         }
     });
 
+    $('#items').on('click', '.option', function(){
+
+    //$(".option").click(function() {
+        console.log("click", $(this));
+        
+    });
+
 
 });
 
-$()
+
 
 function createOption(str) {
     var result = '';
-    result += '<li class="option btn" id =""';
+    result += '<li class="option btn" id ="';
     result += 'option-' + str + '"';
     result += '>';
     result += str;
     result += '</li>';
-    
+
     return result;
 }
-
-
-
-// function createParagraph(str) {
-//     var result = '';
-//     result += '<li class="option" id="';
-//     result += 'option-' + str;
-//     result += str;
-//     result += '</li>';
-
-//     return result;
-// }
-
-// createParagraph('thissi a pgraph')

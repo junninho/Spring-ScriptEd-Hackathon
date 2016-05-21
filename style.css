@@ -9,6 +9,8 @@ body {
     border-style: solid;
     border-color: red;
     border-width: 1px;
+    border-right-style: none;
+    border-left-style: none;
 }
 
 #customBar button {
@@ -18,19 +20,53 @@ body {
 #preview {
     background-image: url("images/bg.jpg");
     background-repeat: no-repeat;
-    height: 600px;
+    height: 475px;
 }
-#options{
-    color:red;
-    list-style-type:none;
+
+#options {
+    color: red;
+    padding:10px;
 }
-.signatures{
+
+#options #items {
+    list-style-type: none;
+    padding:10px;
+}
+
+#options #items li{
+        margin-top:55px;
+}
+
+#options #items li:
+
+#options p {
+    color: white;
+    font-size: 20px;
+}
+
+.signatures {
     font-family: Times New Roman;
     font: italics;
 }
+
 .next {
     font-style: italic;
     font-weight: bold;
+}
+
+footer{
+    color: White;
+    padding: 10px;
+}
+
+.options-male{
+ background-image:"images/male/maleFighter";   
+    
+}
+#continue{
+    font-size:20px;
+    border-color:Red;
+    border-width:1px;
 }
 /*. customizationBarow li{*/
 
@@ -57,5 +93,3 @@ body {
 
 
 /*}*/
-
-
