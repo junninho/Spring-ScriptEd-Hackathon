@@ -3,14 +3,17 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="<link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic' rel='stylesheet' type='text/css'>">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700,700italic">
     <link href="style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body class="container">
     <div class="row">
-       <div class="col-md-12"><h1><center><i>Fatal Fashion</i></center></h1></div> 
+        <div class="col-md-12">
+            <div class="text-center"><img height="150px" src="images/logo.png" /></div>
+        </div>
     </div>
     <div class="row" id="customBar">
         <div class="col-md-2">
@@ -34,15 +37,25 @@
     </div>
     <div class="row">
         <div id="preview" class="col-md-8"></div>
-        <div id="options" class="col-md-4"></div>
-    </div>
-    <div class="row" id="bottomBar">
-        <div class="col-md-4"><img height=" 75px" src="http://www.arborbrothers.org/wp-content/uploads/2015/10/scripted_primary_mark_orange.png"/>
+        <div id="options" class="col-md-4">
+            <ul id="items">
+                
+            </ul>
+
         </div>
-        <div class="col-md-2"><button><center>Next</center></button></div>
-        <div class="col-md-6">Your Mightiest Development Is Ready? In that case...<p><button id="goBattle">Go To Battle!</button></div>
     </div>
-    
+
+    <div class="row" id="bottomBar">
+        <div class="col-md-3"><img class="img-responsive" src="images/scriptEdLogo.png" /></div>
+        <div id="signatures" class="col-md-5">
+            <p>Created by BKLT students: Junninho, Daniel, Rayshaun, Richard, Wensael, and Lissandro</p>
+        </div>
+        <div class="col-md-4"><center>Complete Your Character! (If Youve Missed Something, click on the tab and go back)
+            <p>
+                <center><button id="next">Continue!</button></center>
+            </p></center>
+        </div>
+    </div>
 </body>
 
 </html>

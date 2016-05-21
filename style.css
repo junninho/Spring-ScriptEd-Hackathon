@@ -1,32 +1,61 @@
 body {
     font-family: 'Lobster Two', cursive;
+    background-color: #0f0f0f;
 }
 
-#customizationBar{
+#customBar {
     color: red;
     background-color: transparent;
-    
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
 }
 
-#customizationBar button{
-    color:red;
+#customBar button {
+    color: red;
 }
 
 #preview {
     background-image: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    height: 600px;
 }
-
-/*. customizationBarow li{*/
-    /*position: rtive;*/
-    /*font-weight: bold;*/
-    /*font-size:15px;*/
-/*    display: inline;*/
-/*    font-size:20px;*/
-/*    padding:20px;*/
-/*    border:5px;*/
-/*}*/
-
-.goBattle{
+#options{
+    color:red;
+    list-style-type:none;
+}
+.signatures{
+    font-family: Times New Roman;
+    font: italics;
+}
+.next {
     font-style: italic;
     font-weight: bold;
 }
+/*. customizationBarow li{*/
+
+
+/*position: rtive;*/
+
+
+/*font-weight: bold;*/
+
+
+/*font-size:15px;*/
+
+
+/*    display: inline;*/
+
+
+/*    font-size:20px;*/
+
+
+/*    padding:20px;*/
+
+
+/*    border:5px;*/
+
+
+/*}*/
+
+

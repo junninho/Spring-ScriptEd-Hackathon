@@ -1,58 +1,89 @@
 // JavaScript File
 
+var gender = ["Male", "Female"]
+var skin = ["<li>Skin 1</li>", "<li>Skin 2</li>", "<li>Skin 3</li>"]
+var clothing = ["<li>Clothing 1</li>", "<li>Clothing 2</li>"]
+var colors = ["<li>Red</li>", "<li>Black</li>", "<li>Blue</li>", "<li>Green</li>", "<li>Pink</li>", "<li>Purple</li>"];
+var technique = [];
+var weapon = ["<li>Sword</li>", "<li>Katana</li>", "<li>Staff</li>"];
+
+$(document).ready(function() {
+    var toReplace = '';
+
+    $("#customBar .btn").click(function() {
+        console.log("clicked" + $(this).attr('id'));
+        switch ($(this).attr('id')) {
+            case "gender":
+                for (var i = 0; i < gender.length; i++) {
+                    toReplace += createOption(gender[i]);
+                }
+                $("#items").html(toReplace);
+                toReplace = '';
+                break;
+            case "skin":
+                for (var i = 0; i < skin.length; i++) {
+                    toReplace += createOption(skin[i]);
+                }
+                $("#items").html(toReplace);
+                toReplace = '';
+                break;
+            case "technique":
+                for (var i = 0; i < technique.length; i++) {
+                    toReplace += createOption(technique[i]);
+                }
+                $("#items").html(toReplace);
+                toReplace = '';
+                break;
+            case "clothing":
+                for (var i = 0; i < clothing.length; i++) {
+                    toReplace += createOption(clothing[i]);
+                }
+                $("#items").html(toReplace);
+                toReplace = '';
+                break;
+            case "colors":
+                for (var i = 0; i < colors.length; i++) {
+                    toReplace += createOption(colors[i]);
+                }
+                $("#items").html(toReplace);
+                toReplace = '';
+                break;
+            case "weapon":
+                for (var i = 0; i < weapon.length; i++) {
+                    toReplace += createOption(weapon[i]);
+                }
+                $("#items").html(toReplace);
+                toReplace = '';
+                break;
+        }
+    });
+
+
+});
+
+$()
+
+function createOption(str) {
+    var result = '';
+    result += '<li class="option btn" id =""';
+    result += 'option-' + str + '"';
+    result += '>';
+    result += str;
+    result += '</li>';
+    
+    return result;
+}
 
 
 
-$('#customBar.btn').click(function(){
-    switch(this.attr('id')){
-        case "gender":
-            $("#options").append("<ul>")
-            for(var i = 0; i < gender.length; i++){
-                $("#options").append(gender[i]);
-            }
-            $("#options").append("</ul>");
-        break;
-        case "skin":
-            $("#options").append("<ul>")
-            for(var i = 0; i < skin.length; i++){
-                $("#options").append(skin[i]);
-            }
-            $("#options").append("</ul>");
-        break;
-        case "technique":
-            $("#options").append("<ul>")
-            for(var i = 0; i < technique.length; i++){
-                $("#options").append(technique[i]);
-            }
-            $("#options").append("</ul>");
-        break;
-        case "clothing":
-            $("#options").append("<ul>")
-            for(var i = 0; i < clothing.length; i++){
-                $("#options").append(clothing[i]);
-            }
-            $("#options").append("</ul>");
-        break;
-        case "colors":
-            $("#options").append("<ul>")
-            for(var i = 0; i < colors.length; i++){
-                $("#options").append(colors[i]);
-            }
-            $("#options").append("</ul>");
-        break;
-        case "weapon":
-            $("#options").append("<ul>")
-            for(var i = 0; i < weapon.length; i++){
-                $("#options").append(weapon[i]);
-            }
-            $("#options").append("</ul>");
-        break;
-    }
-})
+// function createParagraph(str) {
+//     var result = '';
+//     result += '<li class="option" id="';
+//     result += 'option-' + str;
+//     result += str;
+//     result += '</li>';
 
-var gender=["<li>Male</li>" , "Female"]
-var skin=[]
-var clothing=[]
-var colors=[]
-var technique=[]
-var weapon=["Sword", "Katana", "Staff"]
+//     return result;
+// }
+
+// createParagraph('thissi a pgraph')
