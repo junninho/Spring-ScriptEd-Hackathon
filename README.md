@@ -12,19 +12,30 @@ fighting style and weapons of their character. After customizing the character,
 the user will be able to view their creation in the preview.
 
 ### Procedure
-We started off designating different tasks to ensure that we would be able to
-complete the project in the most efficient way possible.
-The first set of tasks that we worked on was setting up the main page and 
-designing sprites to suit our intent. We then worked on adjusting the sprites to
-match each user input.
+The team started off designating different tasks to ensure that the project was
+feasible and would be completed in the most efficient way possible. The Project
+Manager then worked on setting up the required environments to allow the teams to
+begin working. The first set of tasks the team decided to undertake was to create
+a wireframe that specifically fitted the needs of the intended project. Next, the designers
+to started to design the main page using CSS to make the page presentable. 
+The designers also worked in Photoshop to design sprites to facilitate user input.
+Meanwhile, the developers worked on the functionality of the page to make it
+interactive and user friendly. Both teams then worked together to accept user
+inputs and adjust the design of the fighter. While the team worked tirelessly, the
+Project Manager worked on setting up everything to ensure that submission would
+be as quick and smooth as possible.
 
 ### Challenges
 Some challenges that we faced included getting the options to function as desired,
-completing the animations and also the time restriction prevented us from being
+completing the animations and also the time restriction that prevented us from being
 able to create the game portion of the project.
 
 ### Lessons/Skills Developed
-
+The team collectively learned numerous concepts and skills both from each other
+and from the volunteers. These include:
+JQuery Concepts
+JavaScript Concepts
+Teamwork Ethics
 
 ### Upcoming
 

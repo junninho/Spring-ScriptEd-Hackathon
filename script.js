@@ -1,60 +1,47 @@
 /* global $ */
 
-var gender = ["Male", "Female"]
-var skin = ["Skin 1", "Skin 2", "Skin 3"]
-var clothing = ["Clothing 1", "Clothing 2"]
-var colors = ["Red", "Black", "Blue", "Green", "Pink", "Purple"];
-var technique = [];
-var weapon = ["Sword", "Katana", "Staff"];
+var gender = ["male", "female"];
+var skin = ["skin1", "skin2"];
+var clothing = ["clothes1", "clothes2"];
+var chosen = {
+    gender: gender[0],
+    skin: skin[0],
+    clothing: clothing[0],
+};
+
+var display = "images/" + chosen.gender + "-" + chosen.skin + "-" + chosen.clothing;
 
 $(document).ready(function() {
     var toReplace = '';
-
+    var index = 0;
+    
     $("#customBar .btn").click(function() {
         console.log("clicked" + $(this).attr('id'));
         
         switch ($(this).attr('id')) {
             case "gender":
                 for (var i = 0; i < gender.length; i++) {
-                    toReplace += createOption(gender[i]);
+                    toReplace += createOption(gender[i], 'gender');
                 }
                 $("#items").html(toReplace);
                 toReplace = '';
+                index = 0;
                 break;
             case "skin":
                 for (var i = 0; i < skin.length; i++) {
-                    toReplace += createOption(skin[i]);
+                    toReplace += createOption(skin[i], 'skin');
                 }
                 $("#items").html(toReplace);
                 toReplace = '';
-                break;
-            case "technique":
-                for (var i = 0; i < technique.length; i++) {
-                    toReplace += createOption(technique[i]);
-                }
-                $("#items").html(toReplace);
-                toReplace = '';
+                index = 1;
                 break;
             case "clothing":
                 for (var i = 0; i < clothing.length; i++) {
-                    toReplace += createOption(clothing[i]);
+                    toReplace += createOption(clothing[i], 'clothing');
                 }
                 $("#items").html(toReplace);
                 toReplace = '';
-                break;
-            case "colors":
-                for (var i = 0; i < colors.length; i++) {
-                    toReplace += createOption(colors[i]);
-                }
-                $("#items").html(toReplace);
-                toReplace = '';
-                break;
-            case "weapon":
-                for (var i = 0; i < weapon.length; i++) {
-                    toReplace += createOption(weapon[i]);
-                }
-                $("#items").html(toReplace);
-                toReplace = '';
+                index = 2;
                 break;
         }
     });
@@ -62,18 +49,25 @@ $(document).ready(function() {
     $('#items').on('click', '.option', function(){
 
     //$(".option").click(function() {
-        console.log("click", $(this));
-        
+        var optionType = $(this).attr('data-option-type');
+        chosen[optionType] = $(this).attr('id').split('-')[1];
+        var display = "images/" + chosen.gender + "-" + chosen.skin + "-" + chosen.clothing + ".png";
+        $(".charimage").css("background-image", "url("+ display +")");
     });
-
+    
+    $("#continue").click(function(){
+        //var tabs = $("#customBar .btn");
+        var nextIndex = index++;
+        $("customBar .btn:nth-child("+nextIndex+")").trigger("click");
+    });
 
 });
 
 
 
-function createOption(str) {
+function createOption(str, optionType) {
     var result = '';
-    result += '<li class="option btn" id ="';
+    result += '<li class="option btn" data-option-type="'+ optionType +'" id ="';
     result += 'option-' + str + '"';
     result += '>';
     result += str;
@@ -81,3 +75,4 @@ function createOption(str) {
 
     return result;
 }
+//$(#)

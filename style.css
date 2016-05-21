@@ -59,8 +59,11 @@ footer{
     padding: 10px;
 }
 
-.options-male{
- background-image:"images/male/maleFighter";   
+#option-male{
+    background-image: url('images/male/malebutton.png');
+
+}
+#option-female{
     
 }
 #continue{
@@ -68,6 +71,37 @@ footer{
     border-color:Red;
     border-width:1px;
 }
+
+#option-skin1{
+    background-color:#916b4d;
+}
+
+#option-skin2{
+    background-color:#f89c888;
+}
+
+#option-clothes1{
+    background-color:#321c1b ;
+}
+#option-clothes2{
+    background-color:#783060;
+}
+#option-clothes3{
+    background-color:#600818;
+}
+#option-clothes4{
+    background-color:#c9c6be ;
+}
+
+
+.charimage{
+    background: url('images/female/female-skin1-clothes1.png');
+    width:300px;
+    height:450px;
+    margin:auto;
+}
+
+
 /*. customizationBarow li{*/
 
 
